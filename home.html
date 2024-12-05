@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Gizmo Support</title>
+</head>
+<body>
+    <header class="navbar">
+        <img src="css/logo.png" class="logo">
+        <ul class="nav_link">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="product and services.html">Product and Services</a></li>
+            <li><a href="#home_footer">Info</a></li>
+        </ul>
+        <div class="navbar_menu">
+            <i onclick="openMenu();" class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="menu">
+        <div class="menu_x">
+            <h1>Menu</h1>
+            <i onclick="closeMenu();" class="fa-solid fa-x"></i>
+        </div>
+        <ul class="menu_nav_link">
+            <div class="link active_menu_link">
+                <i class="fa-solid fa-house"></i><li><a href="home.html">Home</a></li>
+            </div>
+            <div class="link">
+                <i class="fa-solid fa-user-group"></i><li><a href="about.html">About us</a></li>
+            </div>  
+            <div class="link">
+                <i class="fa-solid fa-people-carry-box"></i> <li><a href="product and services.php">Product and Services</a></li>
+            </div>
+            <div class="link">
+                <i class="fa-solid fa-circle-info"></i><li><a href="#home_footer">Info</a></li>
+            </div>
+        </ul>
+    </div>
+    <div class="home_container">
+        <div class="help">
+            <h1>Hello, How can we help you?</h1>
+            <form class="search" id="questionForm">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="search_bar" id="question" name="question" placeholder="Ask a Questions..." required>
+                <input type="submit" class="btn_search" value="Search"></br>
+            </form>
+            <div id="response"></div>
+            <p class="category">
+                Or choose a category to quickly message us in
+            </p>
+            <div class="message_us">
+                <a href="https://www.facebook.com/gizmoetc.support">
+                    <div class="message_container">
+                        <i class="fa-brands fa-facebook"></i>
+                        <h1>Facebook</h1>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/gizmoetc.support">
+                    <div class="message_container">
+                        <i class="fa-brands fa-twitter"></i>
+                        <h1>Twitter</h1>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/gizmoetc.support">
+                    <div class="message_container">
+                        <i class="fa-brands fa-instagram"></i>
+                        <h1>Instagram</h1>
+                    </div>
+                </a>
+                <a href="https://www.facebook.com/gizmoetc.support">
+                    <div class="message_container">
+                        <i class="fa-regular fa-envelope"></i>
+                        <h1>Gmail</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="Frequently_asked_question">
+            <h1>Frequently Asked Question</h1>
+            <div class="question_container">
+                <div class="asked_container">
+                    <div class="question_content">
+                        <div class="question">
+                            <div class="asked_question">
+                                <i class="fa-regular fa-circle"></i><label>What types of CCTV systems do you offer?</label>
+                            </div>
+                            <button onclick="showAnswer(this);">+</button>
+                        </div>
+                        <p class="answer hide_text">
+                            We offer a variety of CCTV systems tailored to meet different needs. Our options include analog cameras for traditional setups, IP cameras for high-definition digital video, and wireless systems for flexible installation. Each system is designed to provide reliable surveillance and enhance security measures.
+                        </p>
+                    </div>
+                    <div class="question_content">
+                        <div class="question">
+                            <div class="asked_question">
+                                <i class="fa-regular fa-circle"></i><label>How secure are your biometric time & attendance systems?</label>
+                            </div>
+                            <button onclick="showAnswer(this);">+</button>
+                        </div>
+                        <p class="answer hide_text">
+                            Our biometric time & attendance systems prioritize security and accuracy. They utilize advanced encryption protocols to protect biometric data and ensure compliance with privacy regulations. With robust authentication methods, such as fingerprint and facial recognition, our systems offer reliable attendance tracking and access control.
+                        </p>
+                    </div>
+                    <div class="question_content">
+                        <div class="question">
+                            <div class="asked_question">
+                                <i class="fa-regular fa-circle"></i><label>Can your security access systems integrate with existing infrastructure?</label>
+                            </div>
+                            <button onclick="showAnswer(this);">+</button>
+                        </div>
+                        <p class="answer hide_text">
+                            Yes, our security access systems are designed to seamlessly integrate with a wide range of existing infrastructure. Whether you have traditional keycard systems or advanced biometric readers in place, our solutions can be tailored to integrate smoothly, ensuring minimal disruption and maximum security enhancement.                        </p>
+                    </div>
+                    <div class="question_content">
+                        <div class="question">
+                            <div class="asked_question">
+                                <i class="fa-regular fa-circle"></i><label>What software development services do you provide?</label>
+                            </div>
+                            <button onclick="showAnswer(this);">+</button>
+                        </div>
+                        <p class="answer hide_text">
+                            We offer comprehensive software development services catering to diverse business needs. Our expertise spans custom software development, mobile app development, web applications, and enterprise solutions. Whether you need a bespoke application or enhancements to existing software, our team delivers innovative solutions aligned with your objectives.                        </p>
+                    </div>
+                    <div class="question_content">
+                        <div class="question">
+                            <div class="asked_question">
+                                <i class="fa-regular fa-circle"></i><label>Do you offer POS systems suitable for different business sizes?</label>
+                            </div>
+                            <button onclick="showAnswer(this);">+</button>
+                        </div>
+                        <p class="answer hide_text">
+                            Absolutely. Our POS systems are versatile and scalable, catering to businesses of all sizes and industries. From small retail shops to large-scale enterprises, our POS solutions streamline transactions, inventory management, and customer engagement. We offer flexible configurations and robust features to meet the unique requirements of each business.                        </p>
+                    </div>
+                </div>
+                <div class="still_have_question">
+                    <h2>You still have a question?</h2>
+                    <p>
+                        If you can't find answer to your question, fill your query & submit it, or you can always contact us. We answer to you shortly.
+                    </p>
+                    <div class="contact">
+                        <div class="contact_field">
+                            <i class="fa-solid fa-phone"></i>
+                            <p><b>+639 177 814 3699</b></p>
+                            <p>we are always happy to help</p>
+                        </div>
+                        <div class="contact_field">
+                            <i class="fa-regular fa-envelope"></i>
+                            <p><b>admin@gizmoetc.com</b></p>
+                            <p>the best way to get aswer faster</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<footer id="home_footer">
+    <div class="connect">
+        <h4>Get connected with us on social nettworks:</h4>
+        <div class="footer_icon">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </div>
+    <div class="footer_information_container">
+        <div class="footer_information">
+            <h2>GizmoEtc</h2>
+            <p>
+                Welcome to Gizmo, your trusted source for cutting-edge technology and innovation! At Gizmo, we are passionate about exploring the exciting world of gadgets, gizmos, and all things tech-related.
+            </p>     
+        </div>
+        <div class="footer_information">
+            <h2>PRODUCTS</h2>
+            <a href="">Solar Installation</a>
+            <a href="">Software and Hardware</a>
+            <a href="">CCTV Installation</a>
+        </div>
+        <div class="footer_information">
+            <h2>Contact</h2>
+            <div class="contact_information">
+                <i class="fa-solid fa-house"></i>
+                <p>Donasco St. Bagong Lungsod, Tandag City</p>
+            </div>
+            <div class="contact_information">
+                <i class="fa-solid fa-envelope"></i>
+                <p>admin@gizmoetc.com</p>
+            </div>
+            <div class="contact_information">
+                <i class="fa-solid fa-phone"></i>
+                <p>211-5031/09088744960</p>
+            </div>
+            <div class="contact_information">
+                <i class="fa-solid fa-clock"></i>
+                <p>Mon - Sat 08:00 AM to 06:00 PM</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <script src="gizmo2.js">
+       
+    </script>
+</body>
+</html>
