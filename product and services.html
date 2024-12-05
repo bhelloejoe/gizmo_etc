@@ -1,34 +1,4 @@
-<?php
-session_start();
-include("db.php");
 
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $product = htmlspecialchars($_POST['product']);
-    $service = htmlspecialchars($_POST['service']);
-    $lastname = htmlspecialchars($_POST['lname']);
-    $firstname = htmlspecialchars($_POST['fname']);
-    $middlename = htmlspecialchars($_POST['mname']);
-    $address = htmlspecialchars($_POST['address']);
-    $email = htmlspecialchars($_POST['email']);
-    $contactnumber = htmlspecialchars($_POST['number']);
-    $description = htmlspecialchars($_POST['description']);
-
-    if (!empty($lastname) && !empty($firstname) && !empty($middlename) && !empty($address) && !empty($email) && !empty($contactnumber) && !empty($description)) {
-        $stmt = $con->prepare("INSERT INTO gizmo_customer_info (Products, Services, LastName, FirstName, MiddleName, Address, Email, ContactNo, Description) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssssssss", $product, $service, $lastname, $firstname, $middlename, $address, $email, $contactnumber, $description);
-
-        if ($stmt->execute()) {
-            echo "<script type='text/javascript'> alert('Successfully Submitted')</script>";
-        } else {
-            echo "<script type='text/javascript'> alert('Failed to Submit: " . $stmt->error . "')</script>";
-        }
-
-        $stmt->close();
-    } else {
-        echo "<script type='text/javascript'> alert('Failed to Submit: All fields are required')</script>";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
